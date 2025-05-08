@@ -25,7 +25,7 @@ p(a, 4) -> val
 val
 
 ####################
-#Contar la cantidad de valores faltantes que hay en un dataframe
+
 tabla <- data.frame(
   ciudad = c("A", NA, "C", "D", "E"),
   sabor = c("vainilla", "chocolate", "vainilla", NA, "Fresa"),
@@ -43,4 +43,7 @@ numNA(tabla)
 numnotNA <- function(x){ 
   return(sum(!is.na(x))) 
 }
-numnotNA(tabla)
+numnotNA(tabla$ciudad)
+
+
+sample(1:5)
