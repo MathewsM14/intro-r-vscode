@@ -16,3 +16,4 @@ df <- data.frame(
 
 # Mostrar las primeras filas del dataframe
 head(df)
+ls()
