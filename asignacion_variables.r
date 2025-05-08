@@ -15,7 +15,7 @@ p
 rm(list = ls())
 
 p <- function(a, b){
-    return((a+b)/2)
+  return((a + b) / 2)
 }
 
 a <- 5
@@ -23,3 +23,17 @@ b <- 12
 
 p(a, 4) -> val
 val
+
+
+#Contar la cantidad de valores faltantes que hay en un dataframe
+df <- data.frame(
+  ciudad = c("A", "B", "C", "D", "E"),
+  sabor = c("vainilla", "chocolate", "vainilla", NA, "Fresa"),
+  cantidad = c(5, 10, NA, 12, NA)
+)
+
+
+numNA <- function(x){ 
+  return(sum(is.na(x))) 
+}
+numNA(df)
