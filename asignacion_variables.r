@@ -24,16 +24,23 @@ b <- 12
 p(a, 4) -> val
 val
 
-
+####################
 #Contar la cantidad de valores faltantes que hay en un dataframe
-df <- data.frame(
-  ciudad = c("A", "B", "C", "D", "E"),
+tabla <- data.frame(
+  ciudad = c("A", NA, "C", "D", "E"),
   sabor = c("vainilla", "chocolate", "vainilla", NA, "Fresa"),
   cantidad = c(5, 10, NA, 12, NA)
 )
 
-
+#funcion para contar la cantidad de valores faltantes en una tabla cualquiera
 numNA <- function(x){ 
   return(sum(is.na(x))) 
 }
-numNA(df)
+numNA(tabla)
+
+
+#funcion para contar la cantidad de valores no faltantes en una tabla cualquiera
+numnotNA <- function(x){ 
+  return(sum(!is.na(x))) 
+}
+numnotNA(tabla)
