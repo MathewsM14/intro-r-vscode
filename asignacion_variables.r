@@ -45,5 +45,32 @@ numnotNA <- function(x){
 }
 numnotNA(tabla$ciudad)
 
+sample(2:8, 2) #funcion sample para obtener un valor aleatorio entre 2 y 8
 
-sample(1:5)
+#funcion que simule el lanzamiento de dos dados
+lanzarDados <- function(){
+  dado1 <- sample(1:6, 1)
+  dado2 <- sample(1:6, 1)
+  return(c(dado1, dado2))
+}
+lanzarDados()
+
+
+#funcion que simule el lanzamiento de dos dados y cuente cuantas veces se lanza hasta obtener un par de dados iguales
+
+LanzarDadosIguales <-function(){
+  lanzamientos <- 1
+  dado1 <- sample(1:6, 1)
+  dado2 <- sample(1:6, 1)
+
+  while(dado1 != dado2){
+    lanzamientos <- lanzamientos + 1
+    dado1 <- sample(1:6, 1)
+    dado2 <- sample(1:6, 1)
+  }
+ 
+  return(lanzamientos)
+}
+
+#Ejemplo de uso
+lanzarDadosHastaIguales()
