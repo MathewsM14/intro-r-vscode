@@ -74,3 +74,15 @@ LanzarDadosIguales <-function(){
 
 #Ejemplo de uso
 lanzarDadosHastaIguales()
+
+
+
+x <- c(5, 2, 4, 8, 1)
+y<- c(0, 0, 0, 0, 0)
+i <- 5
+
+while(i > 5){
+  y <- 0
+  i <- i-1
+}
+y
